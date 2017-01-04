@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+<head>
+	<meta charset="utf-8">
+	<title>Module 1 Solution</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<script src="scripts/angular.min.js"> </script>
+	<script src="scripts/app.js"> </script>
+</head>
+<body>
+	<div ng-controller="LunchCheckController">
+		<p> Enter the items you wish to have for a lunch :  </p> 
+		<input type="text" ng-model="lunchItems" class="border_{{color}}"> 
+		<span> Empty item i.e., , , will not be considered in item counting.</span>
+		<br/> <br/>
+		<button ng-click="checkItemsQuanity()">Check If Too Much</button>
+		<br/>
+		<div class="font_{{color}}">{{message}}</div>
+	</div>
+</body>
+</html>
