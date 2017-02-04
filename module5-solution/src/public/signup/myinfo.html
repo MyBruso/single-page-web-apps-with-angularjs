@@ -1,0 +1,14 @@
+<div class="container">
+	<h1> My Information </h1>
+	<div ng-show="userInformationCtrl.isRegisteredUser()"> 
+		<div>First Name : {{userInformationCtrl.firstName}} </div>
+		<div>Last Name : {{userInformationCtrl.lastName}} </div>
+		<div>Email : {{userInformationCtrl.email}} </div>
+		<div>Phone Number : {{userInformationCtrl.phoneNumber}} </div>
+		<div>Menu Number : {{userInformationCtrl.menuChoiceNumber}} </div>
+	</div>
+	<div ng-show="!userInformationCtrl.isRegisteredUser()">
+		Not Signed Up Yet!
+		<a ui-sref="public.signup"> Sign Up Now </a>
+	</div>
+</div>

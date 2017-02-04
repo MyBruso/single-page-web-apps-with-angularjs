@@ -1,0 +1,28 @@
+
+<div class="container">
+	<h1>Sign Up</h1>
+	<form  name="signupForm" novalidate>
+		First Name : <input type="text" name="firstName" ng-model="signupCtrl.firstName" class="signup-form" required ng-maxlength="10" minlength="4">
+		<span ng-if="(signupForm.firstName.$error.minlength || signupForm.firstName.$error.required) && signupForm.firstName.$touched"> FirstName must be atleast 4 charatcers long </span>
+		<span ng-if="signupForm.firstName.$error.maxlength &&  signupForm.firstName.$touched"> FirstName must not be longer than 10 charatcers </span>
+		</br>
+		Last Name : <input type="text" name="lastName" ng-model="signupCtrl.lastName" class="signup-form" required>
+		<span ng-if="signupForm.lastName.$error.required && signupForm.lastName.$touched"> LastName must be specified </span>
+		</br>
+		Email : <input type="email" name="email" ng-model="signupCtrl.email" class="signup-form" required>
+		<span ng-if="signupForm.email.$invalid && signupForm.email.$touched">
+			Must be a valid email address : handle@domain format
+		</span>
+		</br>
+		Phone Number : <input type="text" name="phoneNumber" ng-model="signupCtrl.phoneNumber" pattern="(\d{3})-(\d{3})-(\d{4})" placeholder="###-###-####" class="signup-form">
+		<span ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">
+			Phone must be in the format ###-###-####
+		</span>
+		</br>
+		Favorite Menu Choice Number : <input type="text" name="menuNumber" ng-model="signupCtrl.menuNumber" class="signup-form">
+		<span>{{signupCtrl.menuNumberMessage}}</span>
+		</br>
+		<button id="signup-submit" ng-disabled="signupForm.$invalid" ng-click="signupCtrl.signUp()"> Sign Up </button>
+	</form>
+	<span>{{signupCtrl.message}}</span>
+</div>

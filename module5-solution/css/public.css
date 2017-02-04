@@ -183,3 +183,20 @@ h3.menu-item-title {
     width: 100%;
   }
 }
+
+/************* Signup form **************************/
+.signup-form {
+  background-color: gray;
+}
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+
+#signup-submit {
+  background-color: blue;
+}
