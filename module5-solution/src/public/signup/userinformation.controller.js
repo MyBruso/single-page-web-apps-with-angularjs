@@ -11,7 +11,7 @@
 		userInformationCtrl.phoneNumber = userInformation.phoneNumber;
 		userInformationCtrl.menuChoiceNumber = userInformation.menuChoiceNumber;
 		userInformationCtrl.menuName = userInformation.menuName;
-		userInformationCtrl.menuDescription = userInformation.userMenuDescription;
+		userInformationCtrl.menuDescription = userInformation.menuDescription;
 
 		userInformationCtrl.isRegisteredUser = function() {
 			if (userInformation.firstName === undefined || 

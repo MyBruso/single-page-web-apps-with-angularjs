@@ -8,6 +8,8 @@
 		<div>
 			Favorite Dish : {{userInformationCtrl.menuName}} 
 			<img ng-src="https://brusog-module5.herokuapp.com/images/{{userInformationCtrl.menuChoiceNumber}}" alt="{{userInformationCtrl.menuName}}">
+			<br>
+			{{userInformationCtrl.menuDescription}}
 		</div>
 	</div>
 	<div ng-show="!userInformationCtrl.isRegisteredUser()">
