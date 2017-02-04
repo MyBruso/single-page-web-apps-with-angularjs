@@ -10,6 +10,8 @@
 		userInformationCtrl.email = userInformation.email;
 		userInformationCtrl.phoneNumber = userInformation.phoneNumber;
 		userInformationCtrl.menuChoiceNumber = userInformation.menuChoiceNumber;
+		userInformationCtrl.menuName = userInformation.menuName;
+		userInformationCtrl.menuDescription = userInformation.userMenuDescription;
 
 		userInformationCtrl.isRegisteredUser = function() {
 			if (userInformation.firstName === undefined || 

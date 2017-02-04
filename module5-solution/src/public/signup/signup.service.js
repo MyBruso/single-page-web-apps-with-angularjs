@@ -7,13 +7,15 @@
 		var service = this;
 		var userInformation = {};
 		
-		service.saveUserInformation = function(userFirstName, userLastName, userEmail, userPhoneNumber, userMenuChoiceNumber) {
+		service.saveUserInformation = function(userFirstName, userLastName, userEmail, userPhoneNumber, userMenuChoiceNumber, userMenuName, userMenuDescription) {
 			userInformation = {
 				firstName : userFirstName,
 				lastName : userLastName,
 				email : userEmail,
 				phoneNumber : userPhoneNumber,
-				menuChoiceNumber : userMenuChoiceNumber
+				menuChoiceNumber : userMenuChoiceNumber,
+				menuName : userMenuName,
+				menuDescription : userMenuDescription
 			};
 		};
 

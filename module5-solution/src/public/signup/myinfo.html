@@ -5,7 +5,10 @@
 		<div>Last Name : {{userInformationCtrl.lastName}} </div>
 		<div>Email : {{userInformationCtrl.email}} </div>
 		<div>Phone Number : {{userInformationCtrl.phoneNumber}} </div>
-		<div>Menu Number : {{userInformationCtrl.menuChoiceNumber}} </div>
+		<div>
+			Favorite Dish : {{userInformationCtrl.menuName}} 
+			<img ng-src="https://brusog-module5.herokuapp.com/images/{{userInformationCtrl.menuChoiceNumber}}" alt="{{userInformationCtrl.menuName}}">
+		</div>
 	</div>
 	<div ng-show="!userInformationCtrl.isRegisteredUser()">
 		Not Signed Up Yet!

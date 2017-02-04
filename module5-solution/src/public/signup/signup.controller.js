@@ -18,7 +18,8 @@
 			signupCtrl.menuNumberMessage = "";
 			var promise = MenuService.getMenuItem(signupCtrl.menuNumber);
 			promise.then(function(data) {
-				SignupService.saveUserInformation(signupCtrl.firstName, signupCtrl.lastName, signupCtrl.email, signupCtrl.phoneNumber, signupCtrl.menuNumber);
+				SignupService.saveUserInformation(signupCtrl.firstName, signupCtrl.lastName, signupCtrl.email, 
+						signupCtrl.phoneNumber, signupCtrl.menuNumber, data.name, data.description);
 				signupCtrl.message = "Your information has been saved";
 			}).catch(function(error) {
 				signupCtrl.menuNumberMessage = "No such menu number exists";
